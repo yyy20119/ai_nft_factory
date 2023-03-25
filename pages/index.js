@@ -3,6 +3,7 @@ import { useWeb3Contract, useMoralis } from "react-moralis"
 import customNFTFactoryAbi from "../constants/CustomNFTFactory.json"
 import networkMapping from "../constants/networkMapping.json"
 import { Card, useNotification, Input, Button, Form } from "web3uikit"
+import Router from "next/router"
 
 export default function CreateNFTForm() {
     const { chainId, account, isWeb3Enabled } = useMoralis()
@@ -96,6 +97,8 @@ export default function CreateNFTForm() {
             position: "topR",
         })
         setLoading(false)
+        Router.push({ pathname: "/collection" })
+        console.log("push router to collection")
     }
 
     return (

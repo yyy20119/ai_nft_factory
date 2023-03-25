@@ -9,6 +9,9 @@ export default function Header() {
                 <Link href="/">
                     <a className="mr-4 p-6">Home</a>
                 </Link>
+                <Link href="/collection">
+                    <a className="mr-4 p-6">Collection</a>
+                </Link>
                 <ConnectButton moralisAuth={false} />
             </div>
         </nav>
